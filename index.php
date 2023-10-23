@@ -174,7 +174,7 @@ $num1 = mysqli_num_rows($result1);
           <div class="col-lg-3 col-md-12 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="img/.jpeg" class="img-fluid" alt="">
+                <img src="img/E.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -192,7 +192,7 @@ $num1 = mysqli_num_rows($result1);
           <div class="col-lg-3 col-md-12 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="img/.jpeg" class="img-fluid" alt="">
+                <img src="img/B.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -211,7 +211,7 @@ $num1 = mysqli_num_rows($result1);
           <div class="col-lg-3 col-md-12 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="img/.jpeg" class="img-fluid" alt="">
+                <img src="img/S1.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -229,7 +229,7 @@ $num1 = mysqli_num_rows($result1);
           <div class="col-lg-3 col-md-12 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="img/.jpg" class="img-fluid" alt="">
+                <img src="img/K.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>

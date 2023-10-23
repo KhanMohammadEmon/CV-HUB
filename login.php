@@ -58,7 +58,7 @@ if ($msg == 'Account created successfully') {
             <div class="line w-100 my-3 d-lg-none"></div>
             <div class="line w-75 my-3 d-lg-block d-none"></div>
             <!-- <h2 class="join fs-lg-2 fs-md-5">JOIN OUR COMMUNITY</h2> -->
-            <button class="button-18" role="button"> <i class="fa-solid fa-arrow-left"></i> BACK</button>
+            <a class="button-18" style="text-decoration:none" role="button" onclick="location.href='index.php';"> <i class="fa-solid fa-arrow-left"></i> BACK</a>
           </div>
           <div class="row down">
             <img class="log-img w-75 d-lg-none" src="img/cv.png" alt="img">

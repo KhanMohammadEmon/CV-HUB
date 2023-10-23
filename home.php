@@ -69,50 +69,15 @@ while ($row = $result1->fetch_assoc()) {
                         <a class="nav-link active" aria-current="page" href="home.php"><i class="fa-solid fa-house-user"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="my_loans.php"><i class="fa-solid fa-coins"></i> My Loans</a>
+                        <a class="nav-link active" aria-current="page" href="my_cv.php"><i class="fa-solid fa-coins"></i> My CV</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="my_req_loans.php"><i class="fa-solid fa-file-contract"></i> My Requested Loans</a>
+                        <a class="nav-link active" aria-current="page" href="create_cv.php"><i class="fa-solid fa-file-contract"></i> Create New CV</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="my_loan_offers.php"><i class="fa-solid fa-piggy-bank"></i> My Loan Offers</a>
+                        <a class="nav-link active" aria-current="page" href="info.php"><i class="fa-solid fa-piggy-bank"></i> Information</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="loan_offer_given.php"><i class="fa-solid fa-gifts"></i> My Given Offers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="lone.php"><i class="fa-solid fa-hand-holding-dollar"></i> My Given Loans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active b" aria-current="page" href="req.php"><i class="fa-brands fa-shopify"></i> Request Loan</a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <!-- <a class="nav-link active b" aria-current="page" href="#"><i class="fa-solid fa-hand-holding-dollar"></i> My Given Loans</a> -->
-
-                        <div class="dropdown">
-                            <a class="nav-link active dropdown-toggle" aria-current="page" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bell"></i></a>
-                            <ul class="dropdown-menu dropdown-menusss dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                                <?php include '_dbconnect.php';
-                                $sql2xx = "SELECT * FROM notification WHERE rcv_email = '$email';";
-                                $result1xx = mysqli_query($con, $sql2xx);
-                                $num1xx = mysqli_num_rows($result1);
-                                while ($rowxx = $result1xx->fetch_assoc()) {
-                                    $n_email = $rowxx["sender_email"];
-                                    $n_num = $rowxx["number"];
-                                    $n_time = $rowxx["time"];
-                                    $n_amount = $rowxx["amount"];
-
-                                ?>
-                                    <li><a class="dropdown-item" href="#"><b style="color:brown;"><i class="fa-solid fa-clock"></i> &nbsp;<?php echo $n_time?></b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-user"></i> <b>Sender:</b> &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;<?php echo $n_email?> &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-phone"></i> <?php echo $n_num?>&nbsp;&nbsp;&nbsp; <b>৳ </b><?php echo $n_amount?></a></li>
-
-                                <?php } ?>
-
-
-                            </ul>
-                        </div>
-                    </li>
+              
 
                     <li class="nav-item">
                         <!-- <a class="nav-link active b" aria-current="page" href="#"><i class="fa-solid fa-hand-holding-dollar"></i> My Given Loans</a> -->
@@ -168,77 +133,14 @@ while ($row = $result1->fetch_assoc()) {
         <section id="next">
 
             <center>
-                <h2 class="t1 epad">Requested Loans</h2>
+                <h2 class="t1 epad">CV HUB</h2>
             </center>
 
             <div class="search-field mt-5 d-flex justify-content-center align-items-center" style="font-family:Dosis, FontAwesome;">
                 <input type="search" class="form-control form-control w-50 rounded srch" placeholder="&nbsp;&nbsp;&nbsp; &#xf002; &nbsp;Search here">
 
             </div>
-            <div class="row" style="margin-top: 5%;">
-
-
-                <?php
-
-                include '_dbconnect.php';
-                $sqlr = "SELECT * FROM loan_req where email!='$email';";
-                $resultr = mysqli_query($con, $sqlr);
-                while ($row = $resultr->fetch_assoc()) {
-                    $id = $row["id"];
-                    $i_id = $row["email"];
-                    $name = $row["name"];
-                    $v_id = $row["v_id"];
-                    $amount = $row["amount"];
-                    $intarest = $row["intarest"];
-                    $reason = $row["reason"];
-                    $deadline = $row["deadline"];
-
-                    $sqlr1 = "SELECT * FROM user where email='$i_id';";
-                    $resultr1 = mysqli_query($con, $sqlr1);
-
-                    while ($row = $resultr1->fetch_assoc()) {
-
-                        $img = $row["image"];
-                    }
-
-                ?>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card-content">
-
-                            <div class="card shadow p-3 mb-5 bg-white rounded">
-                                <?php if ($img == "MaleImage") { ?>
-                                    <a class="custom3" href="profile2.php?id=<?php echo $i_id ?>">
-                                        <img src="img/man.png" class="card-img-top custom2" alt="img">
-                                    </a>
-                                <?php } ?>
-                                <?php if ($img == "FemaleImage") { ?>
-                                    <a class="custom3" href="profile2.php?id=<?php echo $i_id ?>">
-                                        <img src="img/Female.png" class="card-img-top custom2" alt="img">
-                                    </a>
-                                <?php } ?>
-                                <?php if ($img != "MaleImage" && $img != "FemaleImage") { ?>
-                                    <a class="custom3" href="profile2.php?id=<?php echo $i_id ?>">
-                                        <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($img); ?>" class="card-img-top custom2" alt="img">
-                                    </a>
-                                <?php } ?>
-                                <div class="card-body">
-
-                                    <h5 class="card-title">Name: <?php echo $name; ?></h5>
-                                    <p class="bb"><b class="a">ID:</b> <?php echo $v_id; ?></p>
-                                    <p class="bb"><b class="a">Loan Amount:</b> <?php echo $amount; ?></p>
-                                    <p class="bb"><b class="a">Want to Give Interest:</b> <?php echo $intarest; ?></p>
-                                    <p class="bb"><b class="a">Resoning:</b> <?php echo $reason; ?></p>
-                                    <p class="bb"><b class="a">Comfortable Deadline:</b> <?php echo $deadline; ?></p>
-                                    <button type="button" onclick="window.location.href='http://localhost/test/offerloan2.php?id=<?php echo $id ?>';" class="w-100 btn btn-warning cus-b1">Offer Loan</button>
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php } ?>
-            </div>
+            
     </div>
 
 
@@ -360,57 +262,8 @@ while ($row = $result1->fetch_assoc()) {
     </script>
     <script src="https://use.fontawesome.com/2c7ebecd35.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script>
-        function cpass(email, pass) {
-            console.log();
-            Swal.fire({
-
-
-                html: '<br><label>Old Password</label><br>' +
-                    '<input id="swal-input1" class="swal2-input required"><br>' +
-                    '<br><label>New Password</label><br>' +
-                    '<input id="swal-input2" class="swal2-input required"><br>' +
-                    '<br><label>Confirm New Password</label><br>' +
-                    '<input id="swal-input3" class="swal2-input required">',
-                focusConfirm: false,
-
-                inputAttributes: {
-                    autocapitalize: 'off'
-                },
-                showCancelButton: true,
-                confirmButtonText: 'Change Password',
-                showLoaderOnConfirm: true,
-
-                allowOutsideClick: () => !Swal.isLoading()
-            }).then((result) => {
-                if (result.isConfirmed) {
-
-                    if (document.getElementById('swal-input1').value == "" || document.getElementById('swal-input2').value == "" || document.getElementById('swal-input3').value == "") {
-                        Swal.fire('Field can not be empty', '', 'error')
-                    } else if (document.getElementById('swal-input2').value == document.getElementById('swal-input3').value) {
-                        enop = document.getElementById('swal-input1').value;
-                        enop2 = document.getElementById('swal-input2').value;
-
-                        if (pass == enop) {
-
-                            link = "update.php?email=" + email + "&&npass=" + enop2;
-                            location.href = link;
-                        } else {
-                            Swal.fire('Old Password did not matched', '', 'error')
-                        }
-
-                    } else {
-                        Swal.fire('Password did not matched', '', 'error')
-                    }
-                } else {
-                    Swal.fire('Password changing proccess reverted', '', 'warning')
-                }
-            })
-        }
-    </script>
-    <script src="script.js"></script>
-
-
+    <script src = "assets/js/ChangePass.js"></script>
+    
 </body>
 
 </html>

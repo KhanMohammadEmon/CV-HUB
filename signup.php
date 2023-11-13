@@ -156,7 +156,7 @@ if ($msg == 'Password did not matched') {
           </div>
 
           <div class="form-group pad w-100">
-            <input type="file" title=" " class="form-control form-control-lg" name="image" placeholder="Image">
+            <input type="file"  accept="image/*" title=" " class="form-control form-control-lg" name="image" placeholder="Image">
           </div>
 
           <div class="btn1 w-100">

@@ -16,8 +16,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $cpassword = $_POST['cpassword'];
 
             $phone = $_POST['phone'];
-            $image = $_FILES['image']['tmp_name'];
-            $imgContent = addslashes(file_get_contents($image));
+            // $image = $_FILES['image']['tmp_name'];
+            // $imgContent = addslashes(file_get_contents($image));
+
+            $img_name = rand() . $_FILES['image']['name'];
+            $img_tmp_name = $_FILES['image']['tmp_name'];
+            $img_size = $_FILES['image']['size'];
+            //$targetDir = __DIR__ . DIRECTORY_SEPARATOR . 'profileImage' . DIRECTORY_SEPARATOR;
+
+
+          
+
+        
+
             
             
 
@@ -27,9 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $num1 = mysqli_num_rows($result1);
                 
                 
-                if ($num1 == 0) {
+                if ($num1 == 0 && move_uploaded_file($img_tmp_name,"profileImage/".$img_name)) {
                         $sql = "INSERT INTO `user`( `first_name`, `last_name`, `email`, `phone_number`, `password`, `gender`, `image`)
-                        VALUES ('$name1','$name2','$email','$phone','$password','$gender','$imgContent')";
+                        VALUES ('$name1','$name2','$email','$phone','$password','$gender','$img_name')";
                         $result = mysqli_query($con, $sql);
                         $_SESSION['success'] = "Account created successfully";
                         header("Location:signup.php");

@@ -37,6 +37,14 @@
                                 class="fa-solid fa-piggy-bank"></i> Information</a>
                     </li>
 
+                    <li>
+                        <li class = "nav-item">
+                          <a class = "nav-link active" aria-current="page" href="template.php">
+                            <i class="fa-solid fa-template"></i> Template </a>
+                          </a>
+                        </li>
+                    </li>
+
 
                     <li class="nav-item">
                         <!-- <a class="nav-link active b" aria-current="page" href="#"><i class="fa-solid fa-hand-holding-dollar"></i> My Given Loans</a> -->

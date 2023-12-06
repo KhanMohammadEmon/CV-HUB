@@ -62,12 +62,7 @@ while ($row = $result1->fetch_assoc()) {
             <div class="col-lg-6 col-md-12 col-sm-12 col-one">
                 <h2 class="t1">CV-HUB</h2>
                 <h5 class="t2">A CV Generate System</h5>
-                <p class="onep">CV-HUB is a loan management system for the students of United International
-                    University. Student can take loan from each other with interest or without
-                    interest. This is a automated system where it will remaind your next instalment
-                    with amount, due amount etc. Users can communicate with each other through
-                    messeging. This is a helping hand for the students of United International
-                    University in there crisis.</p>
+                <p class="onep">CV-HUB is a Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi, assumenda asperiores voluptatem accusamus et libero adipisci aliquid quaerat temporibus deserunt doloremque dolorum. Quasi voluptatum neque ducimus sed, maiores doloribus?</p>
                 <button onclick="location.href='#next';" class="btn btn-warning cus-b3">Get Started</button>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-two">
@@ -152,8 +147,7 @@ while ($row = $result1->fetch_assoc()) {
                         CV-HUB
                         </h6>
                         <p>
-                        CV-HUB is a non-profitable organization to help the students of United International University.
-                            For any query contact with us from provided contact methods.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt cupiditate quaerat numquam laudantium nulla delectus corrupti autem voluptates minus consequatur?
                         </p>
                     </div>
                     <!-- Grid column -->

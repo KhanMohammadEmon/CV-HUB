@@ -80,12 +80,7 @@ $num1 = mysqli_num_rows($result1);
       <div class="row">
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content jus">
           <h1>CV-HUB</h1>
-          <h2>CV-HUB is a loan management system for the students of United International
-            University. Student can take loan from each other with interest or without
-            interest. This is a automated system where it will remaind your next instalment
-            with amount, due amount etc. Users can communicate with each other through
-            messeging. This is a helping hand for the students of United International
-            University in there crisis.</h2>
+          <h2>CV-HUB is a Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, reiciendis possimus officiis quo perferendis odio dignissimos? Dolore reprehenderit corrupti aut porro dolores in quaerat est consectetur a exercitationem quidem soluta accusamus suscipit nostrum laborum possimus iure officiis quibusdam, repellendus qui.</h2>
           <div><a href="signup.php" class="btn-get-started scrollto">Get Started</a></div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
@@ -109,46 +104,25 @@ $num1 = mysqli_num_rows($result1);
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-cash-stack" style="color: #ff689b;"></i></div>
+              <div class="icon"><i class="bi bi-crate-file" style="color: #ff689b;"></i></div>
               <h4 class="title"><a href="">Generate CV</a></h4>
               <p class="description">It is very user friendly</p><br>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-cash-coin" style="color: #e9bf06;"></i></div>
+              <div class="icon"><i class="bi bi-file" style="color: #e9bf06;"></i></div>
               <h4 class="title"><a href="">Multiple CV Create</a></h4>
               <p class="description"> User </p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-bell" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="">Notification</a></h4>
-              <p class="description">Each student will be notified of each transaction</p><br>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-clock-history" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="">Transaction History</a></h4>
-              <p class="description">Students can view their history at any time</p><br>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-star" style="color: #7322ff;"></i></div>
-              <h4 class="title"><a href="">Rating</a></h4>
-              <p class="description">Every student has a rating depending on their loan returns</p>
-            </div>
-          </div>
+         
           <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-clock" style="color: #4680ff;"></i></div>
-              <h4 class="title"><a href="">24-hour Money Transfer</a></h4>
-              <p class="description">Students can transfer money 24-hours anytime</p><br>
+              <h4 class="title"><a href="">24-hour Services</a></h4>
+              <p class="description">Generate CV  24-hours anytime</p><br>
             </div>
           </div>
         </div>
@@ -339,8 +313,7 @@ $num1 = mysqli_num_rows($result1);
             CV-HUB
             </h6>
             <p>
-            CV-HUB is a non-profitable organization to help the students of United International University.
-              For any query contact with us from provided contact methods. 
+            CV-HUB is a Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellat repudiandae blanditiis adipisci molestiae officiis quam aut ex officia quidem.
             </p>
           </div>
           

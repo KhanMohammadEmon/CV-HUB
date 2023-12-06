@@ -65,9 +65,9 @@ if ($msg == 'Password did not matched') {
             </center>
           </div>
           <div class="row down">
-            <img class="log-img w-100 d-lg-none" src="img/signup1.png" alt="img">
-            <img class="log-img w-100 d-lg-block d-none d-xl-none" src="img/signup1.png" alt="img">
-            <img class="log-img w-100 d-none d-xl-block" src="img/signup1.png" alt="img">
+            <img class="log-img w-100 d-lg-none" src="assets/img/CV-Template-05-removebg-preview 1.png" alt="img">
+            <img class="log-img w-100 d-lg-block d-none d-xl-none" src="assets/img/CV-Template-05-removebg-preview 1.png" alt="img">
+            <img class="log-img w-100 d-none d-xl-block" src="assets/img/CV-Template-05-removebg-preview 1.png" alt="img">
           </div>
         </div>
 

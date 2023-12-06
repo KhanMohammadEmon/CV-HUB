@@ -63,7 +63,7 @@ if ($msg == 'Account created successfully') {
           <div class="row down">
             <img class="log-img w-75 d-lg-none" src="img/cv.png" alt="img">
             <img class="log-img w-50 d-lg-block d-none d-xl-none" src="img/cv.png" alt="img">
-            <img class="log-img d-none d-xl-block" src="img/cv.png" alt="img" style="width:35%;">
+            <img class="log-img d-none d-xl-block" src="img/cv.png" alt="img" style="width:45%;">
           </div>
         </div>
 

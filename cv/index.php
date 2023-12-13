@@ -7,9 +7,10 @@
     <title>Resume Generator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
 </head>
 <body>
-    <div class="container text-light">
+    <div class="container">
     <h1 class="text-center my-5 fw-bold">Resume Form</h1>
     <div class="form-container">
         <form action="submit.php" method="POST" enctype="multipart/form-data">
@@ -131,6 +132,5 @@
         </form>
     </div>
     </div>
-    <script src="app.js"></script>
 </body>
 </html>

@@ -29,7 +29,7 @@
                                 class="fa-solid fa-coins"></i> My CV</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="create_cv.php"><i
+                        <a class="nav-link active" aria-current="page" href="form/index.php"><i
                                 class="fa-solid fa-file-contract"></i> Create New CV</a>
                     </li>
                     <li class="nav-item">

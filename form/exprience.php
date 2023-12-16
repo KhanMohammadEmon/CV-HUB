@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Information Form</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="css/ex.css">
 </head>
 
 <body>
     <h2>User Information Form</h2>
-    <form action="process.php" method="post" enctype="multipart/form-data">
+    <form action="" method="post" enctype="multipart/form-data">
 
-        <h3>Experience (Max: 3)</h3>
+        <h3>Language (Max: 3)</h3>
         <div id="experience-container">
             <div class="experience-entry">
                 <label for="title_1">Title:</label>
@@ -28,7 +29,7 @@
 
         <!-- Repeat the above block for experience entries 2 and 3 -->
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Next">
     </form>
 
 
@@ -61,3 +62,41 @@
 </body>
 
 </html>
+
+
+<?php
+include '../_dbconnect.php';
+
+session_start();
+$u_email =$_SESSION['email'];
+$i_id = "";
+$result = $con->query("SELECT max(id)as id FROM information WHERE u_email = '$u_email'");
+    
+if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $i_id = $row['id'];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    for ($i = 1; $i <= 3; $i++) {
+        if (isset($_POST["title_$i"]) && isset($_POST["description_$i"])) {
+            $title = $_POST["title_$i"];
+            $description = $_POST["description_$i"];
+
+            $sql_experience = "INSERT INTO exprience ( title, `description`,email,i_id)
+                               VALUES ('$title', '$description','$u_email',$i_id)";
+           
+            if ($con->query($sql_experience) !== TRUE) {
+                echo "Error: " . $sql_experience . "<br>" . $con->error;
+            }
+            else
+            {
+                header("Location:skill.php");
+            }
+        }
+    }
+    $con->close();
+  }
+ }
+    
+?>

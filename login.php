@@ -5,8 +5,6 @@ ini_set('display_errors', 0);
 <?php
 $check = 0;
 session_start();
-
-
 $queries = array();
 parse_str($_SERVER['QUERY_STRING'], $queries);
 $id = $queries['id'];

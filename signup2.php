@@ -24,12 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $img_size = $_FILES['image']['size'];
             //$targetDir = __DIR__ . DIRECTORY_SEPARATOR . 'profileImage' . DIRECTORY_SEPARATOR;
 
-
-          
-
-        
-
-            
             
 
             if($password == $cpassword){
@@ -43,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                         VALUES ('$name1','$name2','$email','$phone','$password','$gender','$img_name')";
                         $result = mysqli_query($con, $sql);
                         $_SESSION['success'] = "Account created successfully";
-                        header("Location:signup.php");
+                        header("Location:login.php");
                         exit();
                 }
                 else{
@@ -85,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                         VALUES ('$name1','$name2','$email','$phone','$password','$gender','MaleImage')";
                         $result = mysqli_query($con, $sql);
                         $_SESSION['success'] = "Account created successfully";
-                        header("Location:signup.php");
+                        header("Location:login.php");
                         exit();
                     }
                     if($_POST['gender']=="Female"){
@@ -93,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                         VALUES ('$name1','$name2','$email','$phone','$password','$gender','FemaleImage')";
                         $result = mysqli_query($con, $sql);
                         $_SESSION['success'] = "Account created successfully";
-                        header("Location:signup.php");
+                        header("Location:login.php");
                         exit();
                     }
             }

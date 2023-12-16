@@ -12,7 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $num1 = mysqli_num_rows($result1);
 
     if ($num1 == 1) {  
-        $_SESSION['not_break'] = 1;   
+        $_SESSION['not_break'] = 1; 
+        $_SESSION['email'] = $email;  
         header("Location:home.php");
         exit(); 
     }
